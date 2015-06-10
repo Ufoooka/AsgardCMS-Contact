@@ -1,0 +1,21 @@
+{
+    "name": "Contact",
+    "alias": "Contact",
+    "description": "A module to create small contacts of content to display anywhere on the site.",
+    "keywords": [
+        "asgardcms",
+        "laravel",
+        "cms"
+    ],
+    "active": 1,
+    "order": 1,
+    "version": "v0.1.0",
+    "providers": [
+        "Modules\\Contact\\Providers\\ContactServiceProvider",
+        "Modules\\Contact\\Providers\\RouteServiceProvider"
+    ],
+    "aliases": [],
+    "files": [
+        "composers.php"
+    ]
+}

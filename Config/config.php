@@ -1,19 +1,10 @@
-# Contact
+<?php
 
-
-## Features
-
-* Partial for a contact form, that you can include in your own views
-
-## Configuration
-
-The view of the contact page (you can set this to be a view in your app, which has much more contact on it for example, then include the partial for the form, e.g. `@include('contact::form')`
-
-The fields and rules for your form
-
+return [
+    'name' => 'Contacts',
     'fields' => [
         'title' => [
-            'type' => 'select',
+            'type'    => 'select',
             'choices' => [
                 ''      => 'Please select',
                 'Mr'    => 'Mr',
@@ -37,7 +28,6 @@ The fields and rules for your form
             'type' => 'textarea',
         ],
     ],
-
     'rules' => [
         'title'      => 'required',
         'first_name' => 'required',
@@ -45,10 +35,11 @@ The fields and rules for your form
         'email'      => 'required|email',
         'enquiry'    => 'required',
     ],
+    'mail' => [
+        'views' => [
+            'contact::emails.html.enquiry',
+            'contact::emails.text.enquiry',
+        ],
+    ],
 
-
-## Usage
-
-Customise the options in the config file and then add the following to the view file that you specified in the config to render the contact form inside it.
-
-    @include('contact::form')
+];
